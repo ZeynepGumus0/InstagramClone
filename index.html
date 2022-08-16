@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="INSTAGRAM-CLONE/style.css">
+    <link rel="stylesheet" 
+    href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" 
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+    crossorigin="anonymous">
+    
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>INSTAGRAM</title>
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-expand-sm navbar-light border"  style="height:74px ;">
+        <div class="logo" style="margin-left: 192px ;">
+            <a class="navbar-brand" href="">
+                <img src="https://instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="logo">
+            </a>
+            <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse">
+            <span class="navbar-toggler-icon mr-5"></span>
+        </button>
+        </div>
+        <div class="collapse navbar-collapse">
+            <form class="form-inline my-2 my-lg-0 ml-5 d-none d-sm-block">
+                <input class="form-control mr-sm-2 empty"
+                type="search"
+                placeholder="Ara"
+                style="font-family: Arial , FontAwesome; height:20px; width:216px;"
+                aria-label="Search">
+            </form>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">
+                    <i class="fas fa-home fa-lg mr-2 d-none d-sm-block mt-1" style="color: black;"></i>
+                    <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="fab fa-facebook-messenger fa-lg mr-2 d-none d-sm-block mt-1" style="color: black;"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">
+                    <i class="far fa-compass fa-lg mr-2 d-none d-sm-block mt-1" style="color: black;"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">
+                      <i class="far fa-heart fa-lg mr-2 d-none d-sm-block mt-1" style="color: black;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="index.html" target="_blank">
+                        <img src="data:image/jpeg;base64,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" alt="" class="mb-2"
+                        style="width:23px ; height:23px ; border-radius: 50%;">
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+    <div class=" container middlearea">
+        <div class="row">
+            <div class="col-6 offset-md-2">
+                <div class="card">
+                    <div class="card-body">
+                       <a href="https://www.instagram.com/j.m/" style="text-decoration: none;" target="_blank">
+                    <img src="data:image/jpeg;base64,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" alt=""
+                    class="storyphoto img-fluid mr-3"></a>
+                    <span class="storytext">SUGA</span>
+                    <a href="instagram.com/rkive/" style="text-decoration: none;" target="_blank">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaTdpJqOkA5tB8MfWHAS9h4MET5ZZcnqiifQ&usqp=CAU" alt=""
+                        class="storyphoto img-fluid mr-3"></a>
+                        <span class="storytext">RM</span>
+                        <a href="https://www.instagram.com/jin/" style="text-decoration: none;" target="_blank">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0NvaEu0GEYE-vwtR4yhUssyvi-QKCd_G_t-iwsMLgR_O4ANOQ9w1eGhBl0d8RpSfHXDA&usqp=CAU" alt=""
+                            class="storyphoto img-fluid mr-3"></a>
+                            <span class="storytext">JIN</span>
+                            <a href="https://www.instagram.com/uarmyhope/" style="text-decoration: none;" target="_blank">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4IRwC5LXLY1fUZTtC2YRmuk5rUrTcHjyZ6Q&usqp=CAU" alt=""
+                                class="storyphoto img-fluid mr-3"></a>
+                                <span class="storytext">J-HOPE</span>
+                                <a href="https://www.instagram.com/thv/" style="text-decoration: none;" target="_blank">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoLGvlzB5x5mrIN6TMWNNrMTPqiZFrQy_INw&usqp=CAU alt=""
+                                    class="storyphoto img-fluid mr-3"></a>
+                                    <span class="storytext">V</span>
+                                    <a href="https://www.instagram.com/jungkook.97/" style="text-decoration: none;" target="_blank">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK0Q8f6IJ4dg3RdcbMkImF3Xcd0ohTEjxAfw&usqp=CAU" alt=""
+                                        class="storyphoto img-fluid mr-3"></a>
+                                        <span class="storytext">JUNG KOOK</span>
+                                        
+                    </div>
+               
+                </div> 
+                <div class="card">
+                    <div class="card-header">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1zjJFksqgRR7CUhfdfnlApVEWJBpkUMINdg&usqp=CAU" alt=""
+                        class="mr-2"
+                        style="width: 35px ;height: 35x ; border: radius 50%; " />
+                        <span class="postuserfont"><strong><a href="https://www.instagram.com/j.m/" target="_blank" style="color:black">jm</a></strong></span>
+                        <span class="mt-2">
+                            <strong><i class="fas fa-ellipsis-h"></i></strong>
+                        </span>
+                    </div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfMFQz_6kcP0JWK1W5P4f4lv6RTG0j67w03g&usqp=CAU"
+                    class="card-img-top"
+                    alt="">
+                    <ul class="list-group list-group-horizontal mt-1"
+                    style="list-style-type: none;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="far fa-heart fa-lg"
+                            style="color: black;
+                            position:relative;
+                            font-size: 23px
+                            margin-left -11px;"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="far fa-comment fa-lg"
+                            style="color: black;
+                            position:relative;
+                            font-size: 23px
+                            margin-left -11px;"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="far fa-paper-plane fa-lg"
+                            style="color: black;
+                            position:relative;
+                            font-size: 23px
+                            margin-left -11px;"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="far fa-bookmark fa-lg"
+                            style="color: black;
+                            position:relative;
+                            font-size: 23px
+                            margin-left -11px;"></i>
+                        </a>
+                    </li>
+
+                    </ul>
+                    
+                </div>   
+                <div class="card">
+                    <div class="card-header">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1zjJFksqgRR7CUhfdfnlApVEWJBpkUMINdg&usqp=CAU" alt=""
+                        class="mr-2"
+                        style="width: 35px ;height: 35x ; border: radius 50%; " />
+                        <span class="postuserfont"><strong><a href="https://www.instagram.com/j.m/" target="_blank" style="color:black">jm</a></strong></span>
+                        <span class="mt-2">
+                            <strong><i class="fas fa-ellipsis-h"></i></strong>
+                        </span>
+                    </div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfMFQz_6kcP0JWK1W5P4f4lv6RTG0j67w03g&usqp=CAU"
+                    class="card-img-top"
+                    alt="">
+                    <ul class="list-group list-group-horizontal mt-1"
+                    style="list-style-type: none;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="far fa-heart fa-lg"
+                            style="color: black;
+                            position:relative;
+                            font-size: 23px
+                            margin-left -11px;"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="far fa-comment fa-lg"
+                            style="color: black;
+                            position:relative;
+                            font-size: 23px
+                            margin-left -11px;"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="far fa-paper-plane fa-lg"
+                            style="color: black;
+                            position:relative;
+                            font-size: 23px
+                            margin-left -11px;"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="far fa-bookmark fa-lg"
+                            style="color: black;
+                            position:relative;
+                            font-size: 23px
+                            margin-left -11px;"></i>
+                        </a>
+                    </li>
+
+                    </ul>
+                    
+                </div>  
+                <div class="card">
+                    <div class="card-header">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1zjJFksqgRR7CUhfdfnlApVEWJBpkUMINdg&usqp=CAU" alt=""
+                        class="mr-2"
+                        style="width: 35px ;height: 35x ; border: radius 50%; " />
+                        <span class="postuserfont"><strong><a href="https://www.instagram.com/j.m/" target="_blank" style="color:black">jm</a></strong></span>
+                        <span class="mt-2">
+                            <strong><i class="fas fa-ellipsis-h"></i></strong>
+                        </span>
+                    </div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfMFQz_6kcP0JWK1W5P4f4lv6RTG0j67w03g&usqp=CAU"
+                    class="card-img-top"
+                    alt="">
+                    <ul class="list-group list-group-horizontal mt-1"
+                    style="list-style-type: none;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="far fa-heart fa-lg"
+                            style="color: black;
+                            position:relative;
+                            font-size: 23px
+                            margin-left -11px;"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="far fa-comment fa-lg"
+                            style="color: black;
+                            position:relative;
+                            font-size: 23px
+                            margin-left -11px;"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="far fa-paper-plane fa-lg"
+                            style="color: black;
+                            position:relative;
+                            font-size: 23px
+                            margin-left -11px;"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="far fa-bookmark fa-lg"
+                            style="color: black;
+                            position:relative;
+                            font-size: 23px
+                            margin-left -11px;"></i>
+                        </a>
+                    </li>
+
+                    </ul>
+                    
+                </div>     
+            </div>
+        </div>
+    </div>
+
+  </body>
+</html>
